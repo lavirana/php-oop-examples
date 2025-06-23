@@ -299,4 +299,48 @@ $fun->fun(); // 0
 $fun->fun(); // 1
 $fun->fun(); // 2
 
+
+// INTERFACE
+// An interface is like a blueprint for a class. It defines method signatures (just the names and parameters), but no actual code.
+// Any class that implements the interface must define those methods.
+
+
+// Define an interface
+interface Vehicle {
+    public function startEngine();
+    public function stopEngine();
+}
+
+// Class that implements the interface
+class Car implements Vehicle {
+    public function startEngine() {
+        echo "Car engine started.\n";
+    }
+
+    public function stopEngine() {
+        echo "Car engine stopped.\n";
+    }
+}
+
+// Another class implementing the same interface
+class Bike implements Vehicle {
+    public function startEngine() {
+        echo "Bike engine started.\n";
+    }
+
+    public function stopEngine() {
+        echo "Bike engine stopped.\n";
+    }
+}
+
+// Using the classes
+$car = new Car();
+$bike = new Bike();
+
+$car->startEngine(); // Car engine started.
+$car->stopEngine();  // Car engine stopped.
+
+$bike->startEngine(); // Bike engine started.
+$bike->stopEngine();  // Bike engine stopped.
+
 ?>
